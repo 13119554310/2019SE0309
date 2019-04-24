@@ -1,0 +1,145 @@
+<！doctype html>
+<HTML>
+<HEAD>
+<meta charset =“utf-8”>
+<title>登录</ title>
+</ HEAD>
+<style type =“text / css”>
+身体 {
+	保证金：0;
+	填充：0;
+	背景图像：网址（图像/ sakura.jpg）;
+}
+#content {
+	background-color：rgba（255,255,255,0.95）;
+	宽度：520px;
+	身高：350px;
+	border：1px solid＃000000;
+	border-radius：6px;
+	填充：10px;
+	保证金最高限额：15％;
+	margin-right：auto;
+	margin-left：auto;
+	显示：块;
+}
+.login-header {
+	宽度：100％;
+	身高：120px;
+	margin-bottom：20px;
+	border-bottom：1px solid #dcdcdc;
+}
+.login-header img {
+	margin-top：-50px;
+	margin-right：auto;
+	margin-left：auto;
+	显示：块;
+	宽度：100px;
+	身高：100px;
+}
+.login-input-box {
+	宽度：100％;
+	margin-top：12px;
+	margin-left：auto;
+	margin-right：auto;
+	显示：内联块;
+}
+.login-input-box input {
+	宽度：440px;
+	身高：32px;
+	margin-left：20px;
+	border：1px solid #dcdcdc;
+	border-radius：6px;
+	padding-left：40px;
+}
+.login-input-box输入：hover {
+	border：1px solid＃ff7d0a;
+}
+.login-input-box输入：在{之后
+	border：1px solid＃ff7d0a;
+}
+.login-input-box .icon {
+	宽度：24px;
+	身高：24px;
+	保证金：4px 8px 4px 28px;
+	display：inline-block;
+	位置：绝对;
+	border-right：1px solid #dcdcdc;
+}
+.login-input-box .icon.icon-user {
+	background-image：url（images / User％20Icon.png）;
+	背景重复：不重复;
+    背景位置：中心;
+}
+.login-input-box .icon.icon-password {
+	background-image：url（images / Shape％206.png）;
+	背景重复：不重复;
+    背景位置：中心;
+}
+.remember-box {
+	width: auto;
+	height: auto;
+	margin-left: 20px;
+	margin-top: 12px;
+	font-size: 12px;
+	color: #6a6765;
+}
+.login-button-box {
+	margin-top: 12px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+}
+.login-button-box button {
+	background-color: #ff7d0a;
+	color: #ffffff;
+	font-size: 16px;
+	width: 482px;
+	height: 40px;
+	margin-left: 20px;
+	border: 1px solid #ff7d0a;
+	border-radius: 4px;
+}
+.login-button-box button:hover {
+	background-color: #ee7204;
+}
+.login-button-box button:active {
+	background-color: #ee7204;
+}
+.login-box {
+	margin-top: 20px;
+	text-align: center;
+}
+.login-box a {
+	margin: 30px;
+	color: #4a4744;
+	font-size: 13px;
+	text-decoration: none;
+}
+.login-box a:hover {
+	color: #ff7d0a;
+}
+.login-box a:active {
+	color: #ee7204;
+}
+</style>
+<body>
+    <div id="content">
+        <div class="login-header"> <img src="images/面码.JPG"/></div>
+            <form action="#" method="post" target="_blank" name="login" id="login">
+            <div class="login-input-box"> <span class="icon icon-user"></span>
+                <input type="text" name="username" placeholder="Username:" />
+            </div>
+            <div class="login-input-box"> <span class="icon icon-password"></span>
+                <input type="password" name="password" placeholder="Password:" />
+            </div>
+            </form>
+        <div class="remember-box"><label><input type="checkbox" />&nbsp;Remember Me </label></div>
+        <div class =“login-button-box”> <button type =“submit”>登录</ button> </ div>
+        <div class =“login-box”> <a href="#">忘记？</a> <a href="#">注册</a> </ div>
+    </ DIV>
+    <div class =“footer”> 
+    
+    </ DIV>
+</ BODY>
+</ HTML>
