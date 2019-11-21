@@ -1,0 +1,743 @@
+a {
+	display: block;
+}
+
+/* iconfont style */
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../icon-font/hover-icon/iconfont.eot');
+    src: url('../icon-font/hover-icon/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../icon-font/hover-icon/iconfont.woff2') format('woff2'),
+        url('../icon-font/hover-icon/iconfont.woff') format('woff'),
+        url('../icon-font/hover-icon/iconfont.ttf') format('truetype'),
+        url('../icon-font/hover-icon/iconfont.svg#iconfont') format('svg');
+  }
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* public style */
+
+.container {
+    padding-top: 270px;
+}
+.public-container {
+    width: 1100px;
+    margin: 0 auto;
+}
+.container .section-container {
+    height: 667px;
+    display: flex;
+    align-items: center;
+}
+.container .nav {
+    display: flex;
+    width: 838px;
+    height: 450px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.container .nav li {
+    width: 140px;
+    height: 140px;
+}
+.container .nav li>a {
+    width: 90px;
+    height: 90px;
+    color: #fff;
+    font-size: 55px;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 50%;
+    /* box-sizing: border-box; */
+    margin: 25px;
+    background-color: rgba(255,255,255,.1);
+    position: relative;
+}
+
+/* header-container start! */
+
+.header-container {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.header-content {
+	height: 270px;
+	font-size: 25px;
+	text-align: center;
+}
+.header-container .header-content {
+	height: 170px;
+	font-weight: 100;
+	line-height: 90px;
+}
+.header-container .header-content>h1 {
+	font-weight: 100;
+	color: rgb(137,134,126);
+}
+.header-container .header-content>p {
+	color: rgb(206,207,211);
+}
+.header-nav .nav-list {
+    display: flex;
+    width: 590px;
+    height: 100px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.nav-list .nav-num {
+    float: left;
+    width: 38px;
+    height: 35px;
+    color: #ccc;
+    line-height: 35px;
+    text-align: center;
+    border: 3px solid #ddd;
+    font-weight: 700;
+    transition: color .3s ease ,border-color .3s ease;
+}
+.nav-list .checked {
+    border-color: rgba(0, 0, 0,.5);
+}
+.nav-list .nav-num:not(.checked):hover {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
+}
+
+/* side-nav start! */
+
+.side-nav {
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0,0,0,.5);
+	border-radius: 50%;
+	position: fixed;
+	right: 150px;
+	bottom: 100px;
+}
+.side-nav .back-to-top {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.side-nav .back-to-top .triangle::before {
+	content: "";
+	display: block;
+	width: 2px;
+	height: 25px;
+	background-color: rgba(255,255,255,.7);
+	position: absolute;
+	left: 6px;
+	top: 10px;
+	transform-origin: right bottom;
+	transform: rotate(45deg);
+}
+.side-nav .back-to-top .triangle::after {
+	content: "";
+	display: block;
+	width: 2px;
+	height: 25px;
+	background-color: rgba(255,255,255,.7);
+	position: absolute;
+	right: 6px;
+	top: 10px;
+	transform-origin: left bottom;
+	transform: rotate(-45deg);
+}
+
+/* sec1 start! */
+
+#sec1 {
+    background-color: rgb(65,171,107);
+}
+.nav-list1 li a::before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    opacity: 0;
+    transition: all .25s ease;
+}
+.nav-list1 li:nth-child(2n) a::before {
+    transform: scale(1.3); 
+}
+.nav-list1 li a:hover {
+    background-color: #fff;
+    color: rgb(65,171,107);
+}
+.nav-list1 li a:hover::before {
+    transform: scale(1.15);
+    opacity: 1;
+}
+.nav-list1 li:nth-child(2n) a:hover::before {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+/* sec2 start! */
+
+#sec2 {
+    background-color: rgb(238,163,3);
+}
+.container .nav-list2 li a {
+    color: rgb(238,163,3);
+    background-color: rgb(238,163,3);
+    border: 4px solid #fff;
+}
+.nav-list2 li a::before {
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.nav-list2 li a::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: all .3s ease;
+}
+.nav-list2 li:nth-child(1) a::before {
+    content: "\e63a";
+}
+.nav-list2 li:nth-child(2) a::before {
+    content: "\e63b";
+}
+.nav-list2 li:nth-child(3) a::before {
+    content: "\e63c";
+}
+.nav-list2 li:nth-child(4) a::before {
+    content: "\e63d";
+}
+.nav-list2 li:nth-child(5) a::before {
+    content: "\e63e";
+}
+.nav-list2 li:nth-child(6) a::before {
+    content: "\e63f";
+}
+.nav-list2 li:nth-child(7) a::before {
+    content: "\e640";
+}
+.nav-list2 li:nth-child(8) a::before {
+    content: "\e641";
+}
+.nav-list2 li:nth-child(9) a::before {
+    content: "\e642";
+}
+.nav-list2 li:nth-child(10) a::before {
+    content: "\e643";
+}
+.nav-list2 li:nth-child(2n) a:hover::after {
+    transform: scale(.85);
+}
+.nav-list2 li:nth-child(2n-1) a:hover {
+    color: #fff;
+    background-color: rgb(238,163,3);
+}
+.nav-list2 li:nth-child(2n-1) a:hover::after {
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* sec3 start! */
+
+#sec3 {
+    background-color: rgb(240,96,96);
+}
+.container .nav-list3 li a {
+    background-color: rgb(240,96,96);
+    border: 4px solid #fff;
+}
+.nav-list3 li a::before {
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transition: all .3s ease;
+}
+.nav-list3 li:nth-child(2n-1) a::before {
+    color: rgb(240,96,96);
+}
+.nav-list3 li a::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: all .3s ease;
+}
+.nav-list3 li:nth-child(2n) a::after {
+    transform: scale(1.5);
+    opacity: 0;
+}
+.nav-list3 li:nth-child(n) a::after {
+    background-color: #fff;
+}
+.nav-list3 li:nth-child(1) a::before {
+    content: "\e644";
+}
+.nav-list3 li:nth-child(2) a::before {
+    content: "\e645";
+}
+.nav-list3 li:nth-child(3) a::before {
+    content: "\e646";
+}
+.nav-list3 li:nth-child(4) a::before {
+    content: "\e647";
+}
+.nav-list3 li:nth-child(5) a::before {
+    content: "\e648";
+}
+.nav-list3 li:nth-child(6) a::before {
+    content: "\e649";
+}
+.nav-list3 li:nth-child(7) a::before {
+    content: "\e64a";
+}
+.nav-list3 li:nth-child(8) a::before {
+    content: "\e64b";
+}
+.nav-list3 li:nth-child(9) a::before {
+    content: "\e64c";
+}
+.nav-list3 li:nth-child(10) a::before {
+    content: "\e64d";
+}
+.nav-list3 li:nth-child(2n) a:hover::before {
+    color: rgb(240,96,96);
+    background-color: #fff;
+}
+.nav-list3 li:nth-child(2n) a:hover::after {
+    transform: scale(1);
+    opacity: 1;
+}
+.nav-list3 li:nth-child(2n-1) a:hover::before {
+    color: #fff;
+    background-color: rgb(240,96,96);
+}
+.nav-list3 li:nth-child(2n-1) a:hover::after {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+/* sec4 start! */
+
+#sec4 {
+    background-color: rgb(14,131,205);
+}
+.nav-list4 li:nth-child(n) a {
+    background-color: rgb(14,131,205);
+}
+.nav-list4 li:nth-child(n) a::before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    box-sizing: border-box;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .2s ease;
+}
+.nav-list4 li:nth-child(2n-1) a::before {
+    animation: rotateAnimate 10s linear infinite paused;
+}
+.nav-list4 li:nth-child(2n) a:hover::before {
+    border-style: dashed;
+}
+.nav-list4 li:nth-child(2n-1) a:hover::before {
+    border-style: dashed;
+    animation-play-state: running;
+}
+@keyframes rotateAnimate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* sec5 start! */
+
+#sec5 {
+    background-color: rgb(112,47,168);
+}
+.container .nav-list5 li a {
+    border: 4px solid #fff;
+    background-color: rgb(112,47,168);
+    transition: all .2s ease;
+    overflow: hidden;
+}
+.nav-list5 li a::before ,.nav-list5 li a::after {
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.nav-list5 li:nth-child(n) a::after {
+    left: -90px;
+}
+.nav-list5 li:nth-child(2n) a::after {
+    left: 90px;
+}
+.nav-list5 li:nth-child(3n) a::after {
+    top: -90px;
+    left: 0;
+}
+.nav-list5 li:nth-child(4n) a::after {
+    top: 90px;
+    left: 0;
+}
+.nav-list5 li:nth-child(1) a::before ,.nav-list5 li:nth-child(1) a::after {
+    content: "\e630";
+}
+.nav-list5 li:nth-child(2) a::before ,.nav-list5 li:nth-child(2) a::after {
+    content: "\e631";
+}
+.nav-list5 li:nth-child(3) a::before ,.nav-list5 li:nth-child(3) a::after {
+    content: "\e632";
+}
+.nav-list5 li:nth-child(4) a::before ,.nav-list5 li:nth-child(4) a::after {
+    content: "\e633";
+}
+.nav-list5 li:nth-child(5) a::before ,.nav-list5 li:nth-child(5) a::after {
+    content: "\e634";
+}
+.nav-list5 li:nth-child(6) a::before ,.nav-list5 li:nth-child(6) a::after {
+    content: "\e635";
+}
+.nav-list5 li:nth-child(7) a::before ,.nav-list5 li:nth-child(7) a::after {
+    content: "\e636";
+}
+.nav-list5 li:nth-child(8) a::before ,.nav-list5 li:nth-child(8) a::after {
+    content: "\e637";
+}
+.nav-list5 li:nth-child(9) a::before ,.nav-list5 li:nth-child(9) a::after {
+    content: "\e638";
+}
+.nav-list5 li:nth-child(10) a::before ,.nav-list5 li:nth-child(10) a::after {
+    content: "\e639";
+}
+.nav-list5 li:nth-child(11) a::before ,.nav-list5 li:nth-child(11) a::after {
+    content: "\e630";
+}
+.nav-list5 li:nth-child(12) a::before ,.nav-list5 li:nth-child(12) a::after {
+    content: "\e631";
+}
+.nav-list5 li:nth-child(13) a::before ,.nav-list5 li:nth-child(13) a::after {
+    content: "\e632";
+}
+.nav-list5 li:nth-child(14) a::before ,.nav-list5 li:nth-child(14) a::after {
+    content: "\e633";
+}
+.nav-list5 li:nth-child(15) a::before ,.nav-list5 li:nth-child(15) a::after {
+    content: "\e634";
+}
+.nav-list5 li:nth-child(16) a::before ,.nav-list5 li:nth-child(16) a::after {
+    content: "\e635";
+}
+.nav-list5 li:nth-child(17) a::before ,.nav-list5 li:nth-child(17) a::after {
+    content: "\e636";
+}
+.nav-list5 li:nth-child(18) a::before ,.nav-list5 li:nth-child(18) a::after {
+    content: "\e637";
+}
+.nav-list5 li:nth-child(19) a::before ,.nav-list5 li:nth-child(19) a::after {
+    content: "\e638";
+}
+.nav-list5 li:nth-child(20) a::before ,.nav-list5 li:nth-child(20) a::after {
+    content: "\e639";
+}
+.nav-list5 li:nth-child(n) a:hover {
+    background-color: #fff;
+    color: rgb(112,47,168);
+    border: 6px solid rgba(0,0,0,.1);
+}
+.nav-list5 li:nth-child(n) a:hover::before {
+    left: 90px;
+    transition: left .3s ease;
+}
+.nav-list5 li:nth-child(n) a:hover::after ,.nav-list5 li:nth-child(2n) a:hover::after {
+    left: 0;
+    transition: left .3s ease;
+}
+.nav-list5 li:nth-child(2n) a:hover::before {
+    left: -90px;
+    transition: left .3s ease;
+}
+.nav-list5 li:nth-child(3n) a:hover::before {
+    top: -90px;
+    transition: top .3s ease;
+}
+.nav-list5 li:nth-child(3n) a:hover::after ,.nav-list5 li:nth-child(4n) a:hover::after {
+    top: 0;
+    transition: top .3s ease;
+}
+.nav-list5 li:nth-child(4n) a:hover::before {
+    top: 90px;
+    transition: top .3s ease;
+}
+
+/* sec6 start! */
+
+#sec6 {
+    background-color: rgb(100,187,93);
+}
+.container .nav-list6 li a {
+    border: 4px solid #fff;
+    background-color: rgb(100,187,93);
+    transition: all .2s ease;
+}
+.nav-list6 li a::before {
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;  
+}
+.nav-list6 li:nth-child(1) a::before {
+    content: "\e63a";
+}
+.nav-list6 li:nth-child(2) a::before {
+    content: "\e63b";
+}
+.nav-list6 li:nth-child(3) a::before {
+    content: "\e63c";
+}
+.nav-list6 li:nth-child(4) a::before {
+    content: "\e63d";
+}
+.nav-list6 li:nth-child(5) a::before {
+    content: "\e63e";
+}
+.nav-list6 li:nth-child(n) a::before {
+    animation: rotateAnimate 2s linear infinite paused;
+}
+.nav-list6 li:nth-child(n) a:hover::before {
+    animation-play-state: running;
+}
+.container .nav-list6 li a:hover {
+    background-color: #fff;
+    color: rgb(100,187,93);
+}
+
+/* sec7 start! */
+
+#sec7 {
+    background-color: rgb(213,79,48);
+}
+.container .nav-list7 li a {  
+    background-color: rgb(213,79,48);
+    border: 4px solid #fff;
+    transition: all .2s ease;   
+}
+.container .nav-list7 li:nth-child(2n-1) a {  
+    box-shadow: 5px 5px 0px 0px transparent; 
+}
+.container .nav-list7 li:nth-child(2n) a {  
+    box-shadow: 5px -5px 0px 0px transparent;
+}
+.nav-list7 li a::before {
+    display: block;
+    width: 90px;
+    height: 90px;
+    color: rgba(255,255,255,.5);  
+    border-radius: 50%;
+    border: 4px solid #fff;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    z-index: 2;
+    transition: all .2s ease;
+}
+.nav-list7 li a::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(213,79,48);
+    border-radius: 50%;
+    position: absolute;
+    transition: all .2s ease;
+}
+.nav-list7 li:nth-child(2n-1) a::after {
+    left: -3px;
+    top: -3px;
+}
+.nav-list7 li:nth-child(2n) a::after {
+    left: -3px;
+    top: -6px;
+}
+.nav-list7 li:nth-child(1) a::before {
+    content: "\e644";
+}
+.nav-list7 li:nth-child(2) a::before {
+    content: "\e645";
+}
+.nav-list7 li:nth-child(3) a::before {
+    content: "\e646";
+}
+.nav-list7 li:nth-child(4) a::before {
+    content: "\e647";
+}
+.nav-list7 li:nth-child(5) a::before {
+    content: "\e648";
+}
+.nav-list7 li:nth-child(6) a::before {
+    content: "\e649";
+}
+.nav-list7 li:nth-child(7) a::before {
+    content: "\e64a";
+}
+.nav-list7 li:nth-child(8) a::before {
+    content: "\e64b";
+}
+.nav-list7 li:nth-child(9) a::before {
+    content: "\e64c";
+}
+.nav-list7 li:nth-child(10) a::before {
+    content: "\e64d";
+}
+.container .nav-list7 li a:hover {
+    box-shadow: 5px 5px 0px 0px #fff;
+}
+.container .nav-list7 li:nth-child(2n) a:hover::after {
+    top: -3px;
+}
+.nav-list7 li a:hover::before {
+    font-size: 65px;
+    color: #fff;
+}
+
+/* sec8 start! */
+
+#sec8 {
+    background-color: rgb(56,81,188);
+}
+.nav-list8 li a {
+    transition: all .3s ease;
+}
+.nav-list8 li a::before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.1);
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    transform: scale(.95);
+}
+.nav-list8 li a::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 6px solid rgba(255,255,255,.1);
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    transform: scale(.8);
+}
+.nav-list8 li a:hover {
+    transform: scale(.95);
+}
+.nav-list8 li a:hover::before ,.nav-list8 li a:hover::after {
+    transition: all 2.5s ease;
+    opacity: 0;
+}
+.nav-list8 li a:hover::before {
+    transform: scale(1.5);
+}
+.nav-list8 li a:hover::after {
+    transform: scale(1.8);
+}
+
+/* sec9 start! */
+
+#sec9 {
+    background-color: rgb(150,169,75);
+}
+.container .nav-list9 li a {
+    background-color: rgb(150,169,75);
+}
+.nav-list9 li a::before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    transition: all .2s ease;
+}
+.nav-list9 li a::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    opacity: 0;
+    transition: all .2s ease;
+}
+.nav-list9 li a:hover::before {
+    transform: scale(.85);
+}
+.nav-list9 li a:hover::after {
+    opacity: 1;
+}

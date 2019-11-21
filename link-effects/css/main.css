@@ -1,0 +1,923 @@
+/* stylelint-disable */
+
+a {
+	display: block;
+}
+
+/* public style */
+
+.container {
+	width: 100%;	
+}
+.container .content {
+	width: 1100px;
+	height: 375px;
+	margin: auto;
+	font-size: 25px;
+	text-align: center;
+}
+.container .content .nav {
+	width: 100%;
+	height: 375px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.container .content a {
+	display: block;
+	color: #fff;
+	font-size: 22px;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+	font-weight: 400;
+	position: relative;
+}
+
+/* header-container start! */
+
+.header-container {
+	background-color: rgb(242,242,242);
+}
+.header-container .content {
+	height: 200px;
+	font-weight: 100;
+	line-height: 100px;
+}
+.header-container .content>h1 {
+	font-weight: 100;
+	color: rgb(137,134,126);
+}
+.header-container .content>p {
+	color: rgb(206,207,211);
+}
+.header-container .content>h1:hover ,.header-container .content>p:hover {
+	color: #fff;
+}
+
+/* side-nav start! */
+
+.side-nav {
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0,0,0,.5);
+	border-radius: 50%;
+	position: fixed;
+	right: 150px;
+	bottom: 100px;
+}
+.side-nav .back-to-top {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.side-nav .back-to-top .triangle::before {
+	content: "";
+	display: block;
+	width: 2px;
+	height: 25px;
+	background-color: rgba(255,255,255,.7);
+	position: absolute;
+	left: 6px;
+	top: 10px;
+	transform-origin: right bottom;
+	transform: rotate(45deg);
+}
+.side-nav .back-to-top .triangle::after {
+	content: "";
+	display: block;
+	width: 2px;
+	height: 25px;
+	background-color: rgba(255,255,255,.7);
+	position: absolute;
+	right: 6px;
+	top: 10px;
+	transform-origin: left bottom;
+	transform: rotate(-45deg);
+}
+
+/* sec1 start! */
+
+.sec1 {
+	background-color: rgb(67,90,107);
+}
+.sec1 .content .nav-list1 span::before ,.sec1 .content .nav-list1 span::after {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 16px;
+	position: absolute;
+	top: 50%;
+	border: 2px solid #fff;
+	transform: translateY(-50%);
+	opacity: 0;
+}
+.sec1 .content .nav-list1 span::before {
+	left: 0;
+	border-right: none;
+	transition: left .3s ease ,opacity .2s ease;
+}
+.sec1 .content .nav-list1 span::after {
+	right: 0;
+	border-left: none;
+	transition: right .3s ease ,opacity .2s ease;
+}
+.sec1 .content .nav-list1>li>a:hover span::before ,.sec1 .content .nav-list1>li>a:hover span::after {
+	opacity: 1;
+}
+.sec1 .content .nav-list1>li>a:hover span::before {
+	left: -20px;
+}
+.sec1 .content .nav-list1>li>a:hover span::after {
+	right: -20px;
+}
+
+/* sec2 start! */
+
+.sec2 {
+	background-color: rgb(14,131,205);
+}
+.sec2 .content .nav-list2 a {
+	display: inline-block;
+	line-height: 40px;
+	perspective: 1000px;
+}
+.sec2 .content .nav-list2 span {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: rgb(33,149,222);	
+	transform-style: preserve-3d;
+	transform-origin: 50% 0%;	
+	transition: all .3s ease;
+}
+.sec2 .content .nav-list2 li:nth-of-type(1) span::after ,.sec2 .content .nav-list2 li:nth-of-type(2) span::after ,.sec2 .content .nav-list2 li:nth-of-type(3) span::after ,.sec2 .content .nav-list2 li:nth-of-type(4) span::after ,.sec2 .content .nav-list2 li:nth-of-type(5) span::after {
+	padding: 5px 10px;
+	background-color: #0965a0;	
+	position: absolute;
+	left: 0;
+	top: 25px;
+	transform-origin: 50% 0%;
+	transform: rotateX(-90deg);
+	transition: all .3s ease;
+}
+.sec2 .content .nav-list2 li:nth-of-type(1) span::after {
+	content: "Ratatouille";
+}
+.sec2 .content .nav-list2 li:nth-of-type(2) span::after {
+	content: "Lassitude";
+}
+.sec2 .content .nav-list2 li:nth-of-type(3) span::after {
+	content: "Murmurous";
+}
+.sec2 .content .nav-list2 li:nth-of-type(4) span::after {
+	content: "Palimpsest";
+}
+.sec2 .content .nav-list2 li:nth-of-type(5) span::after {
+	content: "Assemblage";
+}
+.sec2 .content .nav-list2>li>a:hover span {
+	transform: rotateX(90deg) translateY(-15px);
+}
+.sec2 .content .nav-list2>li>a:hover span::after {
+	background-color: #28a2ee;
+}
+
+/* sec3 start! */
+
+.sec3 {
+	background-color: rgb(241,159,15);
+}
+.sec3 .content .nav-list3 span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 25px;
+	border-bottom: 4px solid rgb(216,143,13);
+	opacity: 0;
+	transition: all .3s ease;
+}
+.sec3 .content .nav-list3 a:hover span::after {
+	top: 10px;
+	opacity: 1;
+}
+
+/* sec4 start! */
+
+.sec4 {
+	background-color: rgb(63,164,106);
+}
+.sec4 .content .nav-list4 span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-bottom: 5px solid rgb(255,255,255);
+	opacity: 0;
+	transition: all .3s ease;
+}
+.sec4 .content .nav-list4 a:hover span::after {
+	top: 10px;
+	opacity: 1;
+}
+
+/* sec5 start! */
+
+.sec5 {
+	background-color: rgb(205,68,54);
+}
+.sec5 .content .nav-list5 li {
+	padding: 0 14px;
+	overflow: hidden;
+}
+.sec5 .content .nav-list5 li span {
+	display: block;
+	transform: translateY(0);
+	transition: transform .2s ease;
+}
+.sec5 .content .nav-list5 li:nth-of-type(1) span::after ,.sec5 .content .nav-list5 li:nth-of-type(2) span::after ,.sec5 .content .nav-list5 li:nth-of-type(3) span::after ,.sec5 .content .nav-list5 li:nth-of-type(4) span::after ,.sec5 .content .nav-list5 li:nth-of-type(5) span::after {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-weight: 700;
+	position: absolute;
+	left: 0;
+	top: 24px;
+}
+.sec5 .content .nav-list5 li:nth-of-type(1) span::after {
+	content: "Ratatouille";
+}
+.sec5 .content .nav-list5 li:nth-of-type(2) span::after {
+	content: "Lassitude";
+}
+.sec5 .content .nav-list5 li:nth-of-type(3) span::after {
+	content: "Murmurous";
+}
+.sec5 .content .nav-list5 li:nth-of-type(4) span::after {
+	content: "Palimpsest";
+}
+.sec5 .content .nav-list5 li:nth-of-type(5) span::after {
+	content: "Assemblage";
+}
+.sec5 .content .nav-list5 li:hover span {
+	transform: translateY(-24px);
+}
+
+/* sec6 start! */
+
+.sec6 {
+	background-color: rgb(14,131,205);
+}
+.sec6 .content .nav-list6 li span::before ,.sec6 .content .nav-list6 li span::after {
+	content: "";
+	display: block;
+	position: absolute;
+	transition: height .3s ease;
+}
+.sec6 .content .nav-list6 li span::before {
+	width: 2px;
+	height: 0px;
+	left: -5px;
+	top: -6px;
+	background-color: #fff;
+}
+.sec6 .content .nav-list6 li span::after {
+	width: 100%;
+	height: 2px;
+	padding: 5px;
+	left: -5px;
+	top: -18px;
+	border-bottom: 2px solid #fff;
+}
+.sec6 .content .nav-list6 li:hover span::before {
+	height: 46px;
+}
+.sec6 .content .nav-list6 li:hover span::after {
+	height: 46px;
+}
+
+/* sec7 start! */
+
+.sec7 {
+	background-color: rgb(236,240,241);
+}
+.sec7 .content .nav-list7 li a {
+	color: rgb(86,100,156);
+	font-weight: 600;
+}
+.sec7 .content .nav-list7 li span::before {
+	content: "";
+	display: block;
+	width: 100%;
+	padding: 0;
+	border-top: 3px solid rgb(86,100,156);
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	transition: all .3s ease; 
+}
+.sec7 .content .nav-list7 li span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	padding: 0;
+	border-top: 3px solid rgb(86,100,156);
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	opacity: 0;
+	transition: all .3s ease;
+}
+.sec7 .content .nav-list7 li:hover span::before {
+	left: -10px;
+	padding: 0 10px;
+}
+.sec7 .content .nav-list7 li:hover span::after {
+	left: -10px;
+	bottom: 40px;
+	padding: 0 10px;
+	opacity: 1;
+}
+
+/* sec8 start! */
+
+.sec8 {
+	background-color: rgb(67,90,107);
+}
+.sec8 .content .nav-list8 li {
+	padding: 10px 20px;
+	border: 3px solid rgb(53,72,86);
+}
+.sec8 .content .nav-list8 li span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	border: 3px solid rgb(255,255,255);
+	position: absolute;
+	left: -5px;
+	top: -25px;
+	opacity: 0;
+	transition: all .4s ease;
+}
+.sec8 .content .nav-list8 li:hover span::after {
+	left: -22px;
+	top: -13px;
+	opacity: 1;
+}
+
+/* sec9 start! */
+
+.sec9 {
+	background-color: rgb(158,72,127);
+}    
+.sec9 .content .nav-list9 li a {
+	padding: 10px 20px;
+}
+.sec9 .content .nav-list9 li span::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0 10px 0 10px;
+	border-top: 1px solid rgba(255,255,255,.3);
+	position: absolute;
+	left: -10px;
+	top: -5px;
+	transition: all .3s ease;
+}
+.sec9 .content .nav-list9 li span::after {
+	content: "Special Style!";
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: rgba(0,0,0,0.4);
+	text-shadow: none;
+	text-transform: none;
+	font-style: italic;	
+	font-size: 16px;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	padding: 0 10px;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	position: absolute;
+	left: -10px;
+	top: 40px;
+	opacity: 0;
+	transition: all .3s ease;
+}
+.sec9 .content .nav-list9 li:hover span::before {
+	border-top: 5px solid rgba(255,255,255);
+}
+.sec9 .content .nav-list9 li:hover span::after {
+	top: 50px;
+	border-bottom: 1px solid rgba(255,255,255);
+	opacity: 1;
+}
+
+/* sec10 start! */
+
+.sec10 {
+	background-color: rgb(22,160,133);
+}
+.sec10 .content .nav-list10 li a {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	background-color: rgb(15,124,103);
+	overflow: hidden;
+}
+.sec10 .content .nav-list10 li span {
+	display: block;
+	transform: translateX(0);
+	transition: all .3s ease;
+}
+.sec10 .content .nav-list10 li:nth-of-type(1) span::before ,.sec10 .content .nav-list10 li:nth-of-type(2) span::before ,.sec10 .content .nav-list10 li:nth-of-type(3) span::before ,.sec10 .content .nav-list10 li:nth-of-type(4) span::before ,.sec10 .content .nav-list10 li:nth-of-type(5) span::before {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: rgb(15,124,103);
+	padding: 10px;
+	background-color: rgb(255,255,255);
+	position: absolute;
+	left: -211px;
+	top: -10px;
+}
+.sec10 .content .nav-list10 li:nth-of-type(1) span::before {
+	content: "Ratatouille";
+}
+.sec10 .content .nav-list10 li:nth-of-type(2) span::before {
+	content: "Lassitude";
+}
+.sec10 .content .nav-list10 li:nth-of-type(3) span::before {
+	content: "Murmurous";
+}
+.sec10 .content .nav-list10 li:nth-of-type(4) span::before {
+	content: "Palimpsest";
+}
+.sec10 .content .nav-list10 li:nth-of-type(5) span::before {
+	content: "Assemblage";
+}
+.sec10 .content .nav-list10 li:hover span {
+	transform: translateX(201px);	
+}
+
+/* sec11 start! */
+
+.sec11 {
+	background-color: rgb(14,131,205);
+}
+.sec11 .content .nav-list11 li a {
+    padding: 10px 0;
+    border-top: 2px solid #0972b4;
+    color: #0972b4;
+}
+.sec11 .content .nav-list11 li:nth-of-type(1) span::before ,.sec11 .content .nav-list11 li:nth-of-type(2) span::before ,.sec11 .content .nav-list11 li:nth-of-type(3) span::before ,.sec11 .content .nav-list11 li:nth-of-type(4) span::before ,.sec11 .content .nav-list11 li:nth-of-type(5) span::before {
+	max-width: 0;
+	height: 100%;
+	padding-top: 10px;
+	color: #fff;
+	border-bottom: 2px solid #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all .5s ease;
+	overflow: hidden;
+}
+.sec11 .content .nav-list11 li:nth-of-type(1) span::before {
+	content: "Ratatouille";
+}
+.sec11 .content .nav-list11 li:nth-of-type(2) span::before {
+	content: "Lassitude";
+}
+.sec11 .content .nav-list11 li:nth-of-type(3) span::before {
+	content: "Murmurous";
+}
+.sec11 .content .nav-list11 li:nth-of-type(4) span::before {
+	content: "Palimpsest";
+}
+.sec11 .content .nav-list11 li:nth-of-type(5) span::before {
+	content: "Assemblage";
+}
+.sec11 .content .nav-list11 li:hover span::before {
+	max-width: 100%;
+}
+
+/* sec12 start! */
+
+.sec12 {
+	background-color: rgb(205,68,54);
+}
+.sec12 .content .nav-list12 li span::before ,.sec12 .content .nav-list12 li span::after {
+	content: "";
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	opacity: 0;
+	transition: all .4s ease;
+}
+.sec12 .content .nav-list12 li span::before {
+	width: 20px;
+	height: 20px;
+	border: 2px solid rgba(0,0,0,.1);
+}
+.sec12 .content .nav-list12 li span::after {
+	width: 65px;
+	height: 65px;
+	border: 5px solid rgba(0,0,0,.1);
+}
+.sec12 .content .nav-list12 li:hover span::before {
+	width: 85px;
+	height: 85px;
+	opacity: 1;
+}
+.sec12 .content .nav-list12 li:hover span::after {
+	width: 70px;
+	height: 70px;
+	opacity: 1;
+}
+
+/* sec13 start! */
+
+.sec13 {
+	background-color: rgb(241,159,15);
+}
+.sec13 .content .nav-list13 li a {
+	color: #fff;
+	transition: all .3s ease;
+}
+.sec13 .content .nav-list13 li span::after {
+	content: "•";
+	color: #fff;
+	font-size: 18px;
+	text-shadow: 0 0 0 transparent;
+	position: absolute;
+	left: 50%;
+	bottom: -25px;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: all .3s ease;
+}
+.sec13 .content .nav-list13 li:hover span::after {
+	text-shadow: -10px 0 0 white ,10px 0 0 white;
+	opacity: 1;
+}
+.sec13 .content .nav-list13 li:hover a {
+	color: rgba(0,0,0,.4);
+}
+
+/* sec14 start! */
+
+.sec14 {
+	background-color:  rgb(67,90,107);
+}
+.sec14 .content .nav-list14 li span::before ,.sec14 .content .nav-list14 li span::after {
+	content: "";
+	display: block;
+	width: 2px;
+	height: 50px;
+	background-color: rgba(255,255,255,.4);
+	position: absolute;
+	top: -10px;
+	transition: all .3s ease;
+}
+.sec14 .content .nav-list14 li span::before {
+	left: -20px;
+	transform-origin: center top;
+}
+.sec14 .content .nav-list14 li span::after {
+	right: -20px;
+	transform-origin: center bottom;
+}
+.sec14 .content .nav-list14 li:hover span::before {
+	left: 50%;
+	background-color: rgba(255,255,255,1);
+	transform: rotate(-90deg) translateY(-50%);
+}
+.sec14 .content .nav-list14 li:hover span::after {
+	right: 50%;
+	background-color: rgba(255,255,255,1);
+	transform: rotate(-90deg) translateY(50%);
+}
+
+/* sec15 start! */
+
+.sec15 {
+	background-color: rgb(42,197,108);
+}
+.sec15 .content .nav-list15 li a {
+	color: rgba(0,0,0,.3);
+	font-weight: 600;
+}
+.sec15 .content .nav-list15 li:nth-of-type(1) span::before ,.sec15 .content .nav-list15 li:nth-of-type(2) span::before ,.sec15 .content .nav-list15 li:nth-of-type(3) span::before ,.sec15 .content .nav-list15 li:nth-of-type(4) span::before ,.sec15 .content .nav-list15 li:nth-of-type(5) span::before {
+	color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all .3s ease;
+}
+.sec15 .content .nav-list15 li:nth-of-type(1) span::before {
+	content: "Ratatouille";
+}
+.sec15 .content .nav-list15 li:nth-of-type(2) span::before {
+	content: "Lassitude";
+}
+.sec15 .content .nav-list15 li:nth-of-type(3) span::before {
+	content: "Murmurous";
+}
+.sec15 .content .nav-list15 li:nth-of-type(4) span::before {
+	content: "Palimpsest";
+}
+.sec15 .content .nav-list15 li:nth-of-type(5) span::before {
+	content: "Assemblage";
+}
+.sec15 .content .nav-list15 li:hover span::before {
+	opacity: 0;
+	transform: scale(.9);
+}
+
+/* sec16 start! */
+
+.sec16 {
+	background-color: rgb(170,183,183);
+}
+.sec16 .content .nav-list16 li a {
+	color: rgba(0,0,0,.3);
+}
+.sec16 .content .nav-list16 li:nth-of-type(1) span::before ,.sec16 .content .nav-list16 li:nth-of-type(2) span::before ,.sec16 .content .nav-list16 li:nth-of-type(3) span::before ,.sec16 .content .nav-list16 li:nth-of-type(4) span::before ,.sec16 .content .nav-list16 li:nth-of-type(5) span::before {
+	color: #fff;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+	transform: rotate(5deg);
+	transition: all .3s ease;
+	opacity: 0;
+}
+.sec16 .content .nav-list16 li:nth-of-type(1) span::before {
+	content: "Ratatouille";
+}
+.sec16 .content .nav-list16 li:nth-of-type(2) span::before {
+	content: "Lassitude";
+}
+.sec16 .content .nav-list16 li:nth-of-type(3) span::before {
+	content: "Murmurous";
+}
+.sec16 .content .nav-list16 li:nth-of-type(4) span::before {
+	content: "Palimpsest";
+}
+.sec16 .content .nav-list16 li:nth-of-type(5) span::before {
+	content: "Assemblage";
+}
+.sec16 .content .nav-list16 li:hover span::before {
+	right: 0;
+	top: 0;
+	transform: rotate(0);
+	opacity: 1;
+}
+
+/* sec17 start! */
+
+.sec17 {
+	background-color: rgb(14,131,205);
+}
+.sec17 .content .nav-list17 li a {
+	color: rgba(0,0,0,.3);
+	padding-bottom: 15px;
+}
+.sec17 .content .nav-list17 li:nth-of-type(1) span::before ,.sec17 .content .nav-list17 li:nth-of-type(2) span::before ,.sec17 .content .nav-list17 li:nth-of-type(3) span::before ,.sec17 .content .nav-list17 li:nth-of-type(4) span::before ,.sec17 .content .nav-list17 li:nth-of-type(5) span::before {
+	color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 1;
+	transition: all .3s ease;
+}
+.sec17 .content .nav-list17 li:nth-of-type(1) span::before {
+	content: "Ratatouille";
+}
+.sec17 .content .nav-list17 li:nth-of-type(2) span::before {
+	content: "Lassitude";
+}
+.sec17 .content .nav-list17 li:nth-of-type(3) span::before {
+	content: "Murmurous";
+}
+.sec17 .content .nav-list17 li:nth-of-type(4) span::before {
+	content: "Palimpsest";
+}
+.sec17 .content .nav-list17 li:nth-of-type(5) span::before {
+	content: "Assemblage";
+}
+.sec17 .content .nav-list17 li span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: -15px;
+	opacity: 0;
+	transition: all .3s ease;
+}
+.sec17 .content .nav-list17 li:hover span::before {
+	transform: translateY(-2px);
+	opacity: 0;
+}
+.sec17 .content .nav-list17 li:hover span::after {
+	bottom: 0;
+	opacity: 1;
+}
+
+/* sec18 start! */
+
+.sec18 {
+	background-color: rgb(241,159,15);
+}
+.sec18 .content .nav-list18 li a {
+	color: rgba(0,0,0,.2);
+	font-weight: 600;
+	transition: all .3s ease;
+}
+.sec18 .content .nav-list18 li span::before ,.sec18 .content .nav-list18 li span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: rgba(0,0,0,.3);
+	position: absolute;
+	left: 0;
+	transition: all .3s ease;
+}
+.sec18 .content .nav-list18 li span::before {
+	top: -10px;
+}
+.sec18 .content .nav-list18 li span::after {
+	bottom: -10px;
+}
+.sec18 .content .nav-list18 li:hover a {
+	color: rgba(255,255,255,1);
+}
+.sec18 .content .nav-list18 li:hover span::before {
+	top: 50%;
+	transform: rotate(45deg);
+}
+.sec18 .content .nav-list18 li:hover span::after {
+	bottom: 50%;
+	transform: rotate(-45deg);
+}
+
+/* sec19 start! */
+
+.sec19 {
+	background-color: rgb(205,68,54);
+}
+.sec19 .content .nav-list19 li {
+	perspective: 800px;
+}
+.sec19 .content .nav-list19 li a {
+	background-color: rgb(227,80,65);
+	padding: 8px 20px;
+	transform-style: preserve-3d;
+	transform-origin: center center -100px;
+	transition: all .4s ease;
+}
+.sec19 .content .nav-list19 li:nth-of-type(1) span::before ,.sec19 .content .nav-list19 li:nth-of-type(2) span::before ,.sec19 .content .nav-list19 li:nth-of-type(3) span::before ,.sec19 .content .nav-list19 li:nth-of-type(4) span::before ,.sec19 .content .nav-list19 li:nth-of-type(5) span::before {
+	display: block;
+	padding: 8px 20px;
+	background-color: #b53a2d;
+	position: absolute;
+	top: 0;
+	transform: rotateY(90deg);
+	transform-origin: left center;
+	transition: all .4s ease;
+}
+.sec19 .content .nav-list19 li:nth-of-type(1) span::before {
+	content: "Ratatouille";
+	left: 197px;
+}
+.sec19 .content .nav-list19 li:nth-of-type(2) span::before {
+	content: "Lassitude";
+	left: 166px;	
+}
+.sec19 .content .nav-list19 li:nth-of-type(3) span::before {
+	content: "Murmurous";
+	left: 201px;	
+}
+.sec19 .content .nav-list19 li:nth-of-type(4) span::before {
+	content: "Palimpsest";
+	left: 183px;	
+}
+.sec19 .content .nav-list19 li:nth-of-type(5) span::before {
+	content: "Assemblage";
+	left: 194px;	
+}
+.sec19 .content .nav-list19 li:hover a {
+	background-color: #b53a2d;
+	transform: rotateY(-90deg);
+}
+.sec19 .content .nav-list19 li:hover span::before {
+	background-color: rgb(227,80,65);
+}
+
+/* sec20 start! */
+
+.sec20 {
+	background-color: rgb(67,90,107);
+}
+.sec20 .content .nav-list20 li {
+	perspective: 800px;
+}
+.sec20 .content .nav-list20 li a {
+	background-color: rgb(88,114,133);
+	padding: 10px 15px;
+	box-shadow: 0px 3px rgb(47,67,81) inset;
+	transition: all .5s ease;
+}
+.sec20 .content .nav-list20 li:nth-of-type(1) span::before ,.sec20 .content .nav-list20 li:nth-of-type(2) span::before ,.sec20 .content .nav-list20 li:nth-of-type(3) span::before ,.sec20 .content .nav-list20 li:nth-of-type(4) span::before ,.sec20 .content .nav-list20 li:nth-of-type(5) span::before {
+	display: block;
+	color: rgba(0,0,0,.6);
+	padding: 10px 15px;
+	background-color: rgb(255,255,255);
+	position: absolute;
+	top: 0px;
+	left: 0;
+	transform: rotateX(268deg);
+	transform-style: preserve-3d;
+	transform-origin: center top;
+	transition: all .5s ease;
+}
+.sec20 .content .nav-list20 li:nth-of-type(1) span::before {
+	content: "Ratatouille";
+}
+.sec20 .content .nav-list20 li:nth-of-type(2) span::before {
+	content: "Lassitude";
+}
+.sec20 .content .nav-list20 li:nth-of-type(3) span::before {
+	content: "Murmurous";
+}
+.sec20 .content .nav-list20 li:nth-of-type(4) span::before {
+	content: "Palimpsest";
+}
+.sec20 .content .nav-list20 li:nth-of-type(5) span::before {
+	content: "Assemblage";
+}
+.sec20 .content .nav-list20 li:hover a {
+	background-color: rgba(0,0,0,.4);
+}
+.sec20 .content .nav-list20 li:hover span::before {
+	transform: rotateX(0deg);
+}
+
+/* sec21 start! */
+
+.sec21 {
+	background-color: rgb(63,164,106);
+}
+.sec21 .content .nav-list21 li a {
+	color: rgba(0,0,0,.3);
+	font-weight: 600;
+	transition: all .3s ease;
+}
+.sec21 .content .nav-list21 li span::before ,.sec21 .content .nav-list21 li span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: rgba(255,255,255,1);
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	transition: all .3s ease;
+}
+.sec21 .content .nav-list21 li span::before {
+	top: -20px;
+}
+.sec21 .content .nav-list21 li span::after {
+	bottom: -20px;
+}
+.sec21 .content .nav-list21 li:hover a {
+	color: rgba(255,255,255,1);
+}
+.sec21 .content .nav-list21 li:hover span::before {
+	top: -10px;
+	opacity: 1;
+}
+.sec21 .content .nav-list21 li:hover span::after {
+	bottom: -10px;
+	opacity: 1;
+}
+
+/* stylelint-enable */
+
