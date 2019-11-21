@@ -1,0 +1,233 @@
+a {
+	display: block;
+}
+
+/* public-header start! */
+
+.public-header {
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+.public-header .header-container {
+	overflow: hidden;
+}
+.header-container .header-logo>img {
+	max-width: 100%;
+}
+.header-container .header-nav-switch {
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin-top: 30px;
+	margin-right: 25px;
+	background: url(../img/men_icons.png) no-repeat left top;
+	cursor: pointer;
+}
+.public-footer {
+	display: none;
+}
+.onSwitch {
+	display: block;
+}
+
+/* public-body start! */
+
+.public-body .pic-txt-list {
+	overflow: hidden;
+}
+.pic-txt-item .pic-msg>img {
+	width: 100%;
+	display: block;
+}
+.pic-txt-item .txt-msg {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    opacity: 0;
+	transition: opacity .3s ease;
+}
+.pic-txt-item .txt-msg .txt-wrapper {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+.pic-txt-item .txt-msg .txt-wrapper .txt-info {
+    position: relative;
+	display: inline-block;
+    max-width: 90%;
+    padding: 20px 0;
+    z-index: 77;
+    color: #454545;
+    font-size: 16px;
+    letter-spacing: .5px;
+    border-bottom: 1px solid #bfbbbb;
+    border-top: 1px solid #bfbbbb;	
+}
+.pic-txt-item .txt-msg:hover {
+	opacity: 1;
+}
+
+@media only screen and (max-width:550px) {
+	
+	.header-container .header-logo {
+		float: left;
+		line-height: 100px;
+		margin-left: 25px;		
+	}
+	.header-container .header-nav-content {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 100px;
+		background-color: #fff;
+		z-index: 100;
+	}
+	.header-nav-content .nav-list .nav-item {
+		width: 100%;
+		text-align: center;
+		border-top: 1px solid #f7f5f5;
+		padding: 30px 0;
+		color: #454545;
+		font-size: 14px;
+	}
+	.pic-txt-list .pic-txt-item {
+		width: 100%;
+		height: auto;
+		position: relative;
+		float: left;
+	}
+	.offSwitch {
+		display: none;
+	}
+	
+}
+
+@media only screen and (min-width:551px) and (max-width:1100px) {
+
+	.header-container .header-logo {
+		float: left;
+		line-height: 100px;
+		margin-left: 25px;
+	}
+	.header-container .header-nav-content {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 100px;
+		background-color: #fff;
+		z-index: 100;
+	}
+	.header-nav-content .nav-list .nav-item {
+		width: 100%;
+		text-align: center;
+		border-top: 1px solid #f7f5f5;
+		padding: 30px 0;
+		color: #454545;
+		font-size: 14px;
+	}
+	.pic-txt-list .pic-txt-item {
+		width: 50%;
+		height: auto;
+		position: relative;
+		float: left;
+	}
+	.offSwitch {
+		display: none;
+	}
+	
+}
+
+@media only screen and (min-width:1101px) {
+	
+	.public-header {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 250px;
+		min-height: 100%;
+		padding-left: 50px;
+	}
+	.header-container .header-nav-switch {
+		display: none;
+	}
+	.header-container .header-logo {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	.header-nav-content .nav-list .nav-item {
+		margin-bottom: 30px;
+	}
+	.header-nav-content .nav-list .nav-item>a {
+	    color: #454545;
+		font-size: 14px;
+		letter-spacing: 1px;
+	}
+	.header-container .public-footer {
+		display: block;
+		position: absolute;
+		bottom: 50px;
+	}
+	.public-footer .footer-contact {
+		overflow: hidden;
+		margin-bottom: 15px;
+	}
+	.public-footer .footer-contact .contact-icon {
+		float: left;
+		width: 30px;
+		height: 30px;
+		margin-right: 15px;
+		background: url(../img/sm.png);
+	}
+	.public-footer .footer-contact .icon-one {
+		background-position: 0 0;
+		transition: background .3s ease;
+	}
+	.public-footer .footer-contact .icon-two {
+		background-position: -30px 0;
+	}
+	.public-footer .footer-contact .icon-three {
+		background-position: -62px 0;
+	}
+	.public-footer .footer-contact .icon-four {
+		background-position: -93px 0;
+	}
+	.public-footer .footer-contact .icon-one:hover {
+		background: url(../img/sm_hover.png) no-repeat 0 0;
+	}
+	.public-footer .footer-contact .icon-two:hover {
+		background: url(../img/sm_hover.png) no-repeat -30px 0;
+	}
+	.public-footer .footer-contact .icon-three:hover {
+		background: url(../img/sm_hover.png) no-repeat -62px 0;
+	}
+	.public-footer .footer-contact .icon-four:hover {
+		background: url(../img/sm_hover.png) no-repeat -93px 0;
+	}
+	.public-footer .footer-copyright {
+		color: #454545;
+		font-size: 11px;
+		letter-spacing: 1px;
+		line-height: 18px;
+	}
+	.public-body {
+		width: 100%;
+		height: 100%;
+		padding-left: 300px;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	.pic-txt-list .pic-txt-item {
+		width: 33.33333333%;
+		height: auto;
+		position: relative;
+		float: left;
+	}	
+	
+}
